@@ -12,55 +12,55 @@ The codebase **must follow Clean Code guidelines** — code written here is inte
 
 1. **Separation of Concerns (SoC)**  
    Each module, package, or function should settle one concern and not mix unrelated logic.  
-   Changes in one area should not ripple into unrelated parts of the system. :contentReference[oaicite:1]{index=1}
+   Changes in one area should not ripple into unrelated parts of the system.
 
 2. **Descriptive Naming**  
    Variables, functions, packages, and modules must use meaningful names that describe intent.
 
 3. **No Duplication**  
-   Avoid repeated logic. Abstract shared behavior or logic into a single place. :contentReference[oaicite:2]{index=2}
+   Avoid repeated logic. Abstract shared behavior or logic into a single place.
 
 4. **Keep It Simple and Focused (KISS)**  
-   Favor simple solutions over clever ones. Do not over-engineer. :contentReference[oaicite:3]{index=3}
+   Favor simple solutions over clever ones. Do not over-engineer.
 
 5. **Document for Humans**  
    Comments and documentation must explain *why*, not *what*.  
-   Code should be primarily self-descriptive. :contentReference[oaicite:4]{index=4}
+   Code should be primarily self-descriptive.
 
 6. **Test-First Mindset**  
    Write tests early and maintain them. Tests should cover:
    - unit behavior
    - component boundaries
    - expected failures  
-   Tests serve as *executable documentation*. :contentReference[oaicite:5]{index=5}
+   Tests serve as *executable documentation*.
 
 7. **You Ain’t Gonna Need It (YAGNI)**  
-   Implement only what is required now, not speculative features. :contentReference[oaicite:6]{index=6}
+   Implement only what is required now, not speculative features.
 
 ---
 
 ## 2. Clean Architecture Principles
 
-xtai must follow **Clean Architecture**, where dependencies always point *inward* and business logic is isolated from external concerns (frameworks, UI, databases, CLI, service providers). :contentReference[oaicite:7]{index=7}
+xtai must follow **Clean Architecture**, where dependencies always point *inward* and business logic is isolated from external concerns (frameworks, UI, databases, CLI, service providers).
 
 ### Core Rules
 
 1. **Dependency Rule**  
    Source code dependencies should only point toward the domain/business logic.  
-   External adapters should depend on interfaces defined in core packages. :contentReference[oaicite:8]{index=8}
+   External adapters should depend on interfaces defined in core packages.
 
 2. **Layer Separation**  
    Organize the project into conceptual layers:
    - **Domain (Entities, Business Rules)**
    - **Usecases/Services (Application Logic)**
    - **Adapters/Interfaces (External APIs/Clients)**
-   - **Delivery/UI (CLI entrypoints)** :contentReference[oaicite:9]{index=9}
+   - **Delivery/UI (CLI entrypoints)**
 
 3. **No Framework Coupling**  
-   The architecture should not depend on frameworks or libraries at the core. They belong only in outer layers. :contentReference[oaicite:10]{index=10}
+   The architecture should not depend on frameworks or libraries at the core. They belong only in outer layers.
 
 4. **Testable Business Logic**  
-   Domain and usecases must be testable without running infrastructure or CLI. :contentReference[oaicite:11]{index=11}
+   Domain and usecases must be testable without running infrastructure or CLI.
 
 ---
 
@@ -72,20 +72,20 @@ Although xtai is not a distributed system, we still adopt **service-based princi
 
 1. **Service Granularity**  
    Services (packages/modules) should encapsulate *single, cohesive responsibilities*.  
-   Avoid over-granular services that increase complexity without benefit. :contentReference[oaicite:12]{index=12}
+   Avoid over-granular services that increase complexity without benefit.
 
 2. **Service Reusability**  
    Design modules so that they can be reused across different workflows and plugins.  
-   Logic should not be tied to a specific command or workflow. :contentReference[oaicite:13]{index=13}
+   Logic should not be tied to a specific command or workflow.
 
 3. **Interface-Driven Services**  
-   Services expose only minimal and necessary interfaces; consumers should depend on abstractions (interfaces) not concrete types. :contentReference[oaicite:14]{index=14}
+   Services expose only minimal and necessary interfaces; consumers should depend on abstractions (interfaces) not concrete types.
 
 4. **Loose Coupling**  
-   Components should communicate through well-defined contracts (interfaces), not through direct calls to implementation. :contentReference[oaicite:15]{index=15}
+   Components should communicate through well-defined contracts (interfaces), not through direct calls to implementation.
 
 5. **Stateless Where Possible**  
-   Design services, especially core logic, to avoid shared mutable state to improve testability and predictability. :contentReference[oaicite:16]{index=16}
+   Design services, especially core logic, to avoid shared mutable state to improve testability and predictability.
 
 ---
 
@@ -93,11 +93,11 @@ Although xtai is not a distributed system, we still adopt **service-based princi
 
 Apply SOLID principles in all object and package design:
 
-- **S**ingle Responsibility — one reason to change. :contentReference[oaicite:17]{index=17}  
-- **O**pen/Closed — open for extension, closed for modification. :contentReference[oaicite:18]{index=18}  
-- **L**iskov Substitution — subtypes should be usable in place of base types. :contentReference[oaicite:19]{index=19}  
-- **I**nterface Segregation — small, specific interfaces rather than large ones. :contentReference[oaicite:20]{index=20}  
-- **D**ependency Inversion — depend on abstractions, not concretions. :contentReference[oaicite:21]{index=21}
+- **S**ingle Responsibility — one reason to change.
+- **O**pen/Closed — open for extension, closed for modification.
+- **L**iskov Substitution — subtypes should be usable in place of base types.
+- **I**nterface Segregation — small, specific interfaces rather than large ones.
+- **D**ependency Inversion — depend on abstractions, not concretions.
 
 ---
 
