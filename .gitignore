@@ -46,3 +46,4 @@ vendor/
 # OS-specific
 .DS_Store
 Thumbs.db
+tasks.md
