@@ -3,7 +3,7 @@ package delivery
 import "github.com/spf13/cobra"
 
 // NewRootCommand constructs the root cobra.Command for xtai and wires all
-// subcommands that are part of the Phase 1 CLI surface.
+// subcommands that are part of the CLI surface.
 func NewRootCommand() *cobra.Command {
 	rootCmd := &cobra.Command{
 		Use:   "xtai",

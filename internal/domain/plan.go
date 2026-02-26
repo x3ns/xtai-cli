@@ -3,8 +3,8 @@ package domain
 import "context"
 
 // Plan represents a structured execution plan produced by the planner.
-// The concrete shape will evolve in later phases, but this placeholder
-// captures the core concept for Clean Architecture boundaries.
+// The concrete shape may evolve over time, but this placeholder captures the
+// core concept for Clean Architecture boundaries.
 type Plan struct {
 	ID          string
 	Description string

@@ -7,8 +7,8 @@ import (
 )
 
 // newPlanCommand returns the Cobra command for `xtai plan`.
-// In Phase 1 this prints a placeholder message; later phases will wire it to
-// the planner use case and LLM provider layer.
+// This currently prints a placeholder message; a later implementation will wire
+// it to the planner use case and LLM provider layer.
 func newPlanCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "plan",

@@ -21,7 +21,7 @@ func NewPlannerService(planner domain.Planner) *PlannerService {
 }
 
 // CreatePlan delegates to the underlying domain.Planner. Additional
-// orchestration responsibilities will be added in later phases.
+// orchestration responsibilities can be added as the system evolves.
 func (s *PlannerService) CreatePlan(ctx context.Context, req domain.PlanRequest) (domain.Plan, error) {
 	return s.planner.CreatePlan(ctx, req)
 }

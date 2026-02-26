@@ -8,7 +8,7 @@ import (
 )
 
 // OllamaProvider is a placeholder implementation of llm.Provider for a local
-// Ollama backend. Real model invocation will be added later.
+// Ollama backend. Real model invocation will be added separately.
 type OllamaProvider struct{}
 
 // NewOllamaProvider constructs a new OllamaProvider.
@@ -20,7 +20,7 @@ func NewOllamaProvider() *OllamaProvider {
 var _ domainllm.Provider = (*OllamaProvider)(nil)
 
 // Generate is a placeholder implementation that will be replaced with a real
-// Ollama integration in a later phase.
+// Ollama integration.
 func (p *OllamaProvider) Generate(ctx context.Context, prompt string) (string, error) {
 	_ = ctx
 	_ = prompt

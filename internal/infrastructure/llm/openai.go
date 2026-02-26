@@ -8,7 +8,7 @@ import (
 )
 
 // OpenAIProvider is a placeholder implementation of llm.Provider for OpenAI.
-// Real HTTP calls and configuration will be added in later phases.
+// Real HTTP calls and configuration will be added via the OpenAI API client.
 type OpenAIProvider struct{}
 
 // NewOpenAIProvider constructs a new OpenAIProvider.
@@ -20,7 +20,7 @@ func NewOpenAIProvider() *OpenAIProvider {
 var _ domainllm.Provider = (*OpenAIProvider)(nil)
 
 // Generate is a placeholder implementation that will be replaced with a real
-// OpenAI API integration in a later phase.
+// OpenAI API integration.
 func (p *OpenAIProvider) Generate(ctx context.Context, prompt string) (string, error) {
 	_ = ctx
 	_ = prompt

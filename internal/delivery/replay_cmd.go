@@ -7,8 +7,8 @@ import (
 )
 
 // newReplayCommand returns the Cobra command for `xtai replay`.
-// In Phase 1 this prints a placeholder message; the session store and replay
-// mechanics will be added in later phases.
+// This currently prints a placeholder message; the session store and replay
+// mechanics will be added in a later implementation.
 func newReplayCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "replay",

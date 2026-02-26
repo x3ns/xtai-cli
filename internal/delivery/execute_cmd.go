@@ -7,8 +7,8 @@ import (
 )
 
 // newExecuteCommand returns the Cobra command for `xtai execute`.
-// In Phase 1 this only prints a placeholder message; the safe execution
-// engine and policy system will be introduced in later phases.
+// This currently prints a placeholder message; the safe execution engine and
+// policy system will be introduced in a later implementation.
 func newExecuteCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "execute",

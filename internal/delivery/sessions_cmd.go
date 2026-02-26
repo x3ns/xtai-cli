@@ -7,8 +7,8 @@ import (
 )
 
 // newSessionsCommand returns the Cobra command for `xtai sessions`.
-// In Phase 1 this prints a placeholder message; a real implementation will
-// query the session store for persisted sessions.
+// This currently prints a placeholder message; a real implementation will query
+// the session store for persisted sessions.
 func newSessionsCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "sessions",

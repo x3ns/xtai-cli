@@ -3,8 +3,7 @@ package config
 import "time"
 
 // Config represents top-level xtai configuration loaded from file or
-// environment. For Phase 1 this is a minimal structure with a simple
-// in-memory loader.
+// environment. This is a minimal structure with a simple in-memory loader.
 type Config struct {
 	LLM      LLMConfig     `json:"llm" yaml:"llm"`
 	Timeouts TimeoutConfig `json:"timeouts" yaml:"timeouts"`
@@ -22,7 +21,7 @@ type TimeoutConfig struct {
 }
 
 // Load returns a placeholder configuration. File-based loading will be added
-// in a later phase when configuration formats are finalized.
+// when configuration formats are finalized.
 func Load() Config {
 	return Config{
 		LLM: LLMConfig{

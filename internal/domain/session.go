@@ -7,7 +7,7 @@ import "time"
 type SessionID string
 
 // Session represents a full xtai interaction including plan, execution, and
-// associated artifacts. The structure is intentionally minimal for Phase 1.
+// associated artifacts. The structure is intentionally minimal at this stage.
 type Session struct {
 	ID        SessionID
 	StartedAt time.Time
